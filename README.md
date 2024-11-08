@@ -17,13 +17,12 @@ Before proceeding, ensure you have the following:
 
 ## Step 1: Designing Your Workflow in ComfyUI
 
-1. **Launch ComfyUI**: Start the ComfyUI application on your local machine.
-2. **Create Your Workflow**: Use the node-based interface to design your desired pipeline.
-3. **Enable Developer Mode**:
+1. **Create Your Workflow**: Use the node-based interface to design your desired pipeline.
+2. **Enable Developer Mode**:
    - Click the gear icon above the "Queue Prompt" button.
    - Check the "Enable Dev mode Options" box.
 
-4. **Export the Workflow**:
+3. **Export the Workflow**:
    - With Developer Mode enabled, you can use two options:
      - **Save (API Format)**: Saves the workflow as a JSON file (e.g., `workflow_api.json`), which you can later convert manually using the ComfyUI-to-Python-Extension.
      - **Save as Script**: This newer option directly exports the workflow to a Python script, streamlining the conversion process. Note that this feature may not work for all users or capture every parameter, so verify the output if you encounter issues.
