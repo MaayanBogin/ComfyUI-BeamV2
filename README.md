@@ -25,7 +25,9 @@ Before proceeding, ensure you have the following:
 3. **Export the Workflow**:
    - With Developer Mode enabled, you can use two options:
      - **Save (API Format)**: Saves the workflow as a JSON file (e.g., `workflow_api.json`), which you can later convert manually using the ComfyUI-to-Python-Extension.
-     - **Save as Script**: This newer option directly exports the workflow to a Python script, streamlining the conversion process. Note that this feature may not work for all users or capture every parameter, so verify the output if you encounter issues.
+     - **Save as Script**: This newer option directly exports the workflow to a Python script, streamlining the conversion process.(If this works for you, you may skip step 3)
+
+** Note that this feature may not work for all users or capture every parameter, so verify the output if you encounter issues.
 
 ## Step 2: Converting the Workflow to a Python Script
 
