@@ -18,33 +18,26 @@ Before proceeding, ensure you have the following:
 ## Step 1: Designing Your Workflow in ComfyUI
 
 1. **Create Your Workflow**: Use the node-based interface to design your desired pipeline.
-2. **Enable Developer Mode**:
+2. **Install the ComfyUI-to-Python-Extension**:
+   - To enable script export options, install the ComfyUI-to-Python-Extension in your `ComfyUI/custom_nodes` directory:
+     ```bash
+     cd ComfyUI/custom_nodes
+     git clone https://github.com/pydn/ComfyUI-to-Python-Extension.git
+     cd ComfyUI-to-Python-Extension
+     pip install -r requirements.txt
+     ```
+3. **Enable Developer Mode**:
    - Click the gear icon above the "Queue Prompt" button.
    - Check the "Enable Dev mode Options" box.
 
-3. **Export the Workflow**:
+4. **Export the Workflow**:
    - With Developer Mode enabled, you can use two options:
      - **Save (API Format)**: Saves the workflow as a JSON file (e.g., `workflow_api.json`), which you can later convert manually using the ComfyUI-to-Python-Extension.
      - **Save as Script**: This newer option directly exports the workflow to a Python script, streamlining the conversion process.(If this works for you, you may skip step 3)
 
 ** Note that this feature may not work for all users or capture every parameter, so verify the output if you encounter issues.
 
-## Step 2: Converting the Workflow to a Python Script
-
-To convert the exported workflow to a Python script, follow these steps:
-
-1. **Clone the ComfyUI-to-Python-Extension Repository**:
-   - Navigate to your `ComfyUI/custom_nodes` directory and clone the repository:
-     ```bash
-     git clone https://github.com/pydn/ComfyUI-to-Python-Extension.git
-     ```
-
-2. **Install Dependencies**:
-   - Inside the cloned directory, install the required Python packages:
-     ```bash
-     cd ComfyUI-to-Python-Extension
-     pip install -r requirements.txt
-     ```
+## Step 2: Converting the Workflow to a Python Script 
 
 3. **Convert the Workflow (if needed)**:
    - If you used the JSON export, convert it to a Python script:
