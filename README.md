@@ -92,19 +92,20 @@ With paths configured, you’re ready to deploy your workflow on Beam.
      from my_workflow import run_workflow  # Import your workflow function
 
      # Define the endpoint with required resources
-     @endpoint(
-         image=Image(
-             python_version="python3.9",
-             python_packages=["torch", "diffusers"]
-         ),
-         volumes=[Volume(name="models", mount_path="./models")],  # Volume setup for models
-         cpu=2,
-         memory="16Gi",
-         gpu="A10G",
-     )
-     def generate():
-         run_workflow()
-         return {"status": "success"}
+      @task_queue(
+          name="ComfyUI",
+          cpu=4,
+          memory="32Gi",
+          gpu="A10G",
+          image=Image(
+              python_version="python3.10",
+              python_packages="requirements.txt",
+              # commands=["pip3 install opencv-python"],
+          ),
+          volumes=[Volume(name="PUTVOLUMEHERE", mount_path="./VOLUMEPATH")],
+      )
+      def generate_video(**inputs):
+          main()
      ```
 
 2. **Deploy to Beam**:
